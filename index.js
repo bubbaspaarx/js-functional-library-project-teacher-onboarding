@@ -158,6 +158,18 @@ fi = (function() {
       return newArray
     },
 
+    functions: function(collection) {
+      let newArray = []
+      for(const val in collection) {
+        if(typeof collection[val] === "function" ) {
+          newArray[newArray.length] = val
+        }
+      }
+      return newArray
+    },
+    giveMeMore: function() {
+      return true
+    }
   }
 })()
 
